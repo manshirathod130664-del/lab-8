@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techwood University - Excellence in Education</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <style>
+        :root {
+            --primary: #1a2a6c;
+            --secondary: #b21f1f;
+            --accent: #fdbb2d;
+        }
+        
+        .bg-primary-custom {
+            background-color: var(--primary) !important;
+        }
+        
+        .text-accent {
+            color: var(--accent) !important;
+        }
+        
+        .btn-primary-custom {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        
+        .btn-primary-custom:hover {
+            background-color: #152258;
+            border-color: #152258;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 120px 0 80px;
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+        
+        .vision-mission-card {
+            border-left: 4px solid var(--primary);
+            transition: transform 0.3s;
+        }
+        
+        .vision-mission-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .outcome-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .outcome-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .course-card {
+            transition: transform 0.3s;
+            height: 100%;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+        
+        .recruiter-logo {
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .recruiter-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        footer {
+            background: var(--primary);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+        }
+        
+        .stats-counter {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stats-label {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-building me-2"></i>
+                Techwood University
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#vision">Vision & Mission</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#outcomes">Program Outcomes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#recruiters">Recruiters</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="display-4 fw-bold mb-4">Excellence in Education Since 1985</h1>
+                    <p class="lead mb-4">Shaping futures through innovation, research, and holistic development. Join our community of learners and leaders.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#courses" class="btn btn-light btn-lg">Explore Programs</a>
+                        <a href="#contact" class="btn btn-outline-light btn-lg">Visit Campus</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="mt-5 mt-lg-0">
+                        <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Campus" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-counter">5000+</div>
+                    <div class="stats-label">Students</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-counter">250+</div>
+                    <div class="stats-label">Faculty</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-counter">50+</div>
+                    <div class="stats-label">Programs</div>
+                </div>
+                <div class="col-md-3 col-6 mb-4">
+                    <div class="stats-counter">95%</div>
+                    <div class="stats-label">Placement Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section id="vision" class="section-padding">
+        <div class="container">
+            <h2 class="text-center section-title">Vision & Mission</h2>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="card vision-mission-card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-eye-fill text-primary fs-3 me-3"></i>
+                                <h3 class="card-title mb-0">Our Vision</h3>
+                            </div>
+                            <p class="card-text">
+                                To be a globally recognized institution of higher learning, committed to excellence in teaching, research, and innovation. We envision creating leaders who will drive positive change in society through knowledge, ethics, and sustainable practices.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card vision-mission-card h-100 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-bullseye text-primary fs-3 me-3"></i>
+                                <h3 class="card-title mb-0">Our Mission</h3>
+                            </div>
+                            <p class="card-text">
+                                To provide transformative education that fosters critical thinking, creativity, and collaboration. We are dedicated to developing well-rounded individuals equipped with the skills and values needed to succeed in a rapidly changing world and contribute meaningfully to their communities.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Program Outcomes Section -->
+    <section id="outcomes" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Program Specific Outcomes</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card outcome-card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-laptop text-primary fs-1"></i>
+                            </div>
+                            <h4 class="card-title text-center">Engineering Programs</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Apply knowledge of mathematics, science, and engineering fundamentals</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Design and conduct experiments, analyze and interpret data</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Design systems, components, or processes to meet needs</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Function effectively on multidisciplinary teams</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card outcome-card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-briefcase text-primary fs-1"></i>
+                            </div>
+                            <h4 class="card-title text-center">Business Programs</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Apply business concepts and theories to solve real-world problems</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Demonstrate effective communication and presentation skills</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Analyze ethical dilemmas in business contexts</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Develop strategic plans for organizational success</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card outcome-card shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="text-center mb-3">
+                                <i class="bi bi-palette text-primary fs-1"></i>
+                            </div>
+                            <h4 class="card-title text-center">Arts & Sciences</h4>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Demonstrate critical thinking and analytical skills</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Communicate effectively in written and oral forms</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Understand diverse cultural and historical perspectives</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-success me-2"></i>Apply interdisciplinary approaches to complex problems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Offered Section -->
+    <section id="courses" class="section-padding">
+        <div class="container">
+            <h2 class="text-center section-title">Courses Offered</h2>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card course-card shadow-sm">
+                        <div class="card-header bg-primary text-white text-center py-4">
+                            <i class="bi bi-cpu fs-1"></i>
+                            <h4 class="mt-2">Engineering</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Computer Science & Engineering</li>
+                                <li class="mb-2">Mechanical Engineering</li>
+                                <li class="mb-2">Electrical Engineering</li>
+                                <li class="mb-2">Civil Engineering</li>
+                                <li class="mb-2">Electronics & Communication</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-primary">B.Tech / M.Tech</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card course-card shadow-sm">
+                        <div class="card-header bg-success text-white text-center py-4">
+                            <i class="bi bi-graph-up fs-1"></i>
+                            <h4 class="mt-2">Management</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">MBA - Finance</li>
+                                <li class="mb-2">MBA - Marketing</li>
+                                <li class="mb-2">MBA - HR</li>
+                                <li class="mb-2">BBA</li>
+                                <li class="mb-2">Business Analytics</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-success">BBA / MBA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card course-card shadow-sm">
+                        <div class="card-header bg-warning text-dark text-center py-4">
+                            <i class="bi bi-pencil-square fs-1"></i>
+                            <h4 class="mt-2">Arts & Humanities</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Psychology</li>
+                                <li class="mb-2">English Literature</li>
+                                <li class="mb-2">Sociology</li>
+                                <li class="mb-2">Political Science</li>
+                                <li class="mb-2">Journalism & Mass Comm</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-warning text-dark">BA / MA</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card course-card shadow-sm">
+                        <div class="card-header bg-info text-white text-center py-4">
+                            <i class="bi bi-flask fs-1"></i>
+                            <h4 class="mt-2">Sciences</h4>
+                        </div>
+                        <div class="card-body p-4">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">Biotechnology</li>
+                                <li class="mb-2">Chemistry</li>
+                                <li class="mb-2">Physics</li>
+                                <li class="mb-2">Mathematics</li>
+                                <li class="mb-2">Environmental Science</li>
+                            </ul>
+                            <div class="text-center mt-3">
+                                <span class="badge bg-info">B.Sc / M.Sc</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="gallery" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Campus Life & Events</h2>
+            <div class="row g-3">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-primary h-100 d-flex align-items-center justify-content-center text-white fw-bold fs-4">
+                            Graduation Ceremony
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Annual Graduation Day 2023</h5>
+                            <p class="mb-0">Celebrating our graduates' achievements</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-success h-100 d-flex align-items-center justify-content-center text-white fw-bold fs-4">
+                            Tech Fest
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Annual Technical Festival</h5>
+                            <p class="mb-0">Showcasing innovation and creativity</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-warning h-100 d-flex align-items-center justify-content-center text-dark fw-bold fs-4">
+                            Sports Day
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Inter-College Sports Competition</h5>
+                            <p class="mb-0">Promoting sportsmanship and fitness</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-info h-100 d-flex align-items-center justify-content-center text-white fw-bold fs-4">
+                            Cultural Fest
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Annual Cultural Festival</h5>
+                            <p class="mb-0">Celebrating diversity and talent</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-danger h-100 d-flex align-items-center justify-content-center text-white fw-bold fs-4">
+                            Seminar
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Industry Expert Seminar</h5>
+                            <p class="mb-0">Knowledge sharing with professionals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item rounded shadow-sm">
+                        <div class="bg-secondary h-100 d-flex align-items-center justify-content-center text-white fw-bold fs-4">
+                            Workshop
+                        </div>
+                        <div class="gallery-overlay">
+                            <h5>Skill Development Workshop</h5>
+                            <p class="mb-0">Enhancing practical skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Recruiters Section -->
+    <section id="recruiters" class="section-padding">
+        <div class="container">
+            <h2 class="text-center section-title">Our Top Recruiters</h2>
+            <div class="row g-4">
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Google</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Microsoft</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Amazon</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Infosys</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">TCS</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">IBM</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Accenture</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Deloitte</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Wipro</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Cognizant</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Capgemini</span>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 col-4">
+                    <div class="recruiter-logo shadow-sm">
+                        <span class="fw-bold text-primary">Intel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="text-center section-title">Contact Us</h2>
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Get In Touch</h4>
+                            <div class="mb-4">
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-geo-alt-fill text-primary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">Address</h5>
+                                        <p class="mb-0">123 Education Boulevard, Knowledge City, KC 12345</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center mb-3">
+                                    <i class="bi bi-telephone-fill text-primary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">Phone</h5>
+                                        <p class="mb-0">+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <i class="bi bi-envelope-fill text-primary fs-5 me-3"></i>
+                                    <div>
+                                        <h5 class="mb-1">Email</h5>
+                                        <p class="mb-0">info@techwood.edu</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <h5 class="mb-3">Follow Us</h5>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-facebook"></i></a>
+                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-twitter"></i></a>
+                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-linkedin"></i></a>
+                                    <a href="#" class="btn btn-outline-primary"><i class="bi bi-instagram"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm">
+                        <div class="card-body p-4">
+                            <h4 class="card-title mb-4">Send Message</h4>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" required>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="email" class="form-label">Your Email</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control" id="subject" required>
+                                    </div>
+                                    <div class="col-12">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-primary-custom btn-lg">Send Message</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h4 class="mb-3">Techwood University</h4>
+                    <p>Providing quality education and shaping future leaders since 1985. Committed to excellence in teaching, research, and innovation.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#home" class="text-white text-decoration-none">Home</a></li>
+                        <li class="mb-2"><a href="#about" class="text-white text-decoration-none">About</a></li>
+                        <li class="mb-2"><a href="#courses" class="text-white text-decoration-none">Courses</a></li>
+                        <li class="mb-2"><a href="#gallery" class="text-white text-decoration-none">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Academic Programs</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Engineering</li>
+                        <li class="mb-2">Management</li>
+                        <li class="mb-2">Arts & Sciences</li>
+                        <li class="mb-2">Research Programs</li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-3">Newsletter</h5>
+                    <p>Subscribe to our newsletter for the latest updates.</p>
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your email">
+                        <button class="btn btn-accent text-dark" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2023 Techwood University. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
